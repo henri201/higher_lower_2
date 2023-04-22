@@ -35,14 +35,16 @@ print(f"Against B: {format_data(account_b)}.")
 guess = input(f"Who has more followers? Type 'A' or 'B': ").lower()
 a_flollowers = account_a["follower_count"]
 b_flollowers = account_b["follower_count"]
-
 is_correct = check_answer(guess, account_a, b_flollowers)
+
 #compares the two answers and your guess 
 ## get follower count of each account
 ## use if statements to check if user is correct
 
-
-
+if is_correct:
+    print("you're right")
+else:
+    print("you're wrong")
 
 # if the guess was right promt another one , if it was wrong , end the game
 
