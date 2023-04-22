@@ -23,18 +23,20 @@ print(logo)
 # generate random account to compare and get their info
 account_a = random.choice(data)
 account_b = random.choice(data)
-if person_a == person_b:
-    person_b = random.choice(data)
+if account_a == account_b:
+    account_b = random.choice(data)
 
-print(f"Compare A: {format_data(person_a)}.")
+print(f"Compare A: {format_data(account_a)}.")
 print(vs)
-print(f"Against B: {format_data(person_b)}.")
+print(f"Against B: {format_data(account_b)}.")
 
 
 # type a or b to guess
 guess = input(f"Who has more followers? Type 'A' or 'B': ").lower()
 a_flollowers = account_a["follower_count"]
 b_flollowers = account_b["follower_count"]
+
+is_correct = check_answer(guess, account_a, b_flollowers)
 #compares the two answers and your guess 
 ## get follower count of each account
 ## use if statements to check if user is correct
