@@ -11,7 +11,7 @@ def format_data(account):
     account_country = account["country"]
     return(f"{account_name}, a {account_desc}, from {account_country}")
 
-#compares the two answers and your guess
+# compares the two answers and your guess
 def check_answer(guess, a_followers, b_followers):
     if a_followers > b_followers:
         return guess == "a"
@@ -19,18 +19,17 @@ def check_answer(guess, a_followers, b_followers):
         return guess == "b"
 
 
-#to clear the system after restart
+# to clear the system after restart
 def clear():
     os.system('cls' if os.name=='nt' else 'clear')
 
 # display art
-
 print(logo)
 score = 0
 game_should_continue = True
 account_b = random.choice(data)
 
-#make game repeatable
+# make game repeatable
 while game_should_continue:
     # generate random account to compare and get their info
     account_a = account_b
